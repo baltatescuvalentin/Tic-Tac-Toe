@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer></script>
+        <script src="https://kit.fontawesome.com/3ef20e5b59.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1 class="header_title">Tic-Tac-Toe the Game</h1>
+                <img src="./icons/tic-tac-toe.png" alt="logo" class="logo">
+            </div>
+
+            <div class="main_container">
+                <div class="player">
+                    <p class="player_text" id="player_one">Player One(X)</p>
+                    <input type="text" name="player_one" id="player_one" class="name_input" placeholder="Player's name">
+                    <p class="score" id="pOneScore">0</p>
+                </div>
+
+                <div class="game_container">
+                    <div class="pre_start">
+                        <button class="startBtn"> Start Game </button>
+                    </div>
+
+                    <div class="game">
+                        <p class="current_action">Player's X Turn</p>
+
+                        <div class="gameboard">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+
+                        <div class="game_buttons">
+                            <button class="resetBtn"> Reset <img src="./icons/refresh.png" alt="reset"></button>
+                            <button class="go_backBtn">Go Back!</button>
+                            <button class="swapBtn">Swap <img src="./icons/swap.png" alt="swap"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player">
+                    <p class="player_text" id="player_two">Player Two(O)</p>
+                    <input type="text" name="player_two" id="player_two" class="name_input" placeholder="Player's name">
+                    <p class="score" id="pTwoScore">0</p>
+                </div>
+            </div>
+
+            <footer>
+                <h3 class="footer_content">Copyright©baltatescuvalentin 
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    <a href="https://github.com/baltatescuvalentin" target="_blank">
+                        <i class="fa-brands fa-github" ></i>
+                    </a>
+                </h3>
+            </footer>
+        </div>
+    </body>
+</html>

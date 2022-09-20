@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+:root {
+    --header-bg: rgb(218, 209, 209);
+    --box-shadow: rgba(117, 111, 111, 0.9);
+    --box-board: rgba(117, 111, 111, 0.2);
+    --font: 'Sigmar One';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--font), sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-bg);
+}
+
+.logo {
+    height: 64px;
+    width: 64px;
+}
+
+.header_title {
+    margin: 0;
+}
+
+.header_title{
+    margin-right: 24px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    height: 64px;
+}
+
+.main_container {
+    flex-grow: 1;
+    box-shadow: inset 0px 12px 8px -10px var(--box-shadow);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player_text {
+    font-size: 48px;
+}
+
+.score {
+    font-size: 72px;
+}
+
+.player p {
+    margin: 0;
+}
+
+.symbol {
+    font-size: 64px;
+}
+
+.name_input {
+    height: 36px;
+    font-size: 24px;
+    border-radius: 24px;
+}
+
+.game_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.startBtn {
+    height: 64px;
+    width: 280px;
+    font-size: 32px;
+    font-family: var(--font);
+    border-radius: 24px;
+    box-shadow: 2px 4px 4px 4px rgba(0, 0, 0, 0.5);
+    /* display: none; */
+}
+
+.startBtn:hover {
+    transform: scale(1.01);
+    transition: 0.2s ease-out;
+}
+
+.startBtn:active {
+    transform: scale(0.99);
+    transition: 0.2s ease-in;
+}
+
+.game {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 0.8;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+}
+
+.box {
+    height: 110px;
+    width: 110px;
+    border-radius: 8px;
+    background-color: var(--box-board);
+}
+
+/* .box:nth-child(3) {
+    background-color: red;
+} */
+
+.box:hover {
+    transform: scale(1.05);
+    transition: 0.2 ease-out;
+}
+
+.current_action {
+    font-size: 32px;
+}
+
+.box_x {
+    background-image: url("./icons/cross.png");
+    background-size: cover;
+}
+
+.box_o {
+    background-image: url("./icons/omicron.png");
+    background-size: contain;
+}
+
+.box_x:hover, .box_o:hover {
+    cursor: not-allowed;
+}
+
+.resetBtn, .swapBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.resetBtn, .go_backBtn, .swapBtn {
+    font-size: 24px;
+    border-radius: 16px;
+    border: none;
+    width: 150px;
+    box-shadow: 0 8px 4px -4px var(--box-shadow);
+    font-family: var(--font), sans-serif;
+}
+
+.resetBtn:hover, .go_backBtn:hover, .swapBtn:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-out;
+}
+
+.resetBtn:active, .go_backBtn:active, .swapBtn:active {
+    transform: scale(0.985);
+    transition: 0.3s ease-in;
+}
+
+.resetBtn img, .swapBtn img {
+    height: 24px;
+    width: 24px;
+}
+
+.game_buttons {
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
